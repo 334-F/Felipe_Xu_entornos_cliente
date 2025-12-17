@@ -94,6 +94,7 @@ function iniciarSala2() {
             }
         }
 
-        // IMPORTANTE: ¡ESTO FALTABA! Ejecutar la función
+      
         iniciarSala2();
   
+
