@@ -38,3 +38,18 @@ contenedor.addEventListener("click", (e) => {
         e.target.remove();
     }
 });
+
+// Práctica Unidad 5. Entrega Parcial 1
+// Funcionalidad: Gestión de la propagación (stopPropagation)
+
+const puerta = document.getElementById("puerta");
+const cerradura = document.getElementById("cerradura");
+
+puerta.addEventListener("click", () => {
+    alert("Puerta cerrada");
+});
+
+cerradura.addEventListener("click", (e) => {
+    e.stopPropagation(); // Detenemos la burbuja hacia la puerta
+    alert("Necesitas una llave");
+});
