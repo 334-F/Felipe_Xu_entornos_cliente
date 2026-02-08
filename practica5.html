@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Practica 5</title>
+    <style>
+        body {
+            background: #333;
+            color: white;
+            padding: 20px;
+        }
+        
+        .sala {
+            width: 500px;
+            height: 300px;
+            background: #555;
+            border: 1px solid white;
+            margin: 20px;
+            position: relative;
+        }
+        
+        #objeto {
+            width: 40px;
+            height: 40px;
+            background: red;
+            position: absolute;
+            top: 100px;
+            left: 200px;
+        }
+        
+        .objetos {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .item {
+            width: 60px;
+            height: 60px;
+            background: green;
+            cursor: pointer;
+            text-align: center;
+            line-height: 60px;
+        }
+        
+        #puerta {
+            width: 180px;
+            height: 120px;
+            background: brown;
+            position: relative;
+            margin: 20px;
+        }
+        
+        #cerradura {
+            width: 25px;
+            height: 25px;
+            background: yellow;
+            position: absolute;
+            top: 50px;
+            right: 10px;
+        }
+        
+        input {
+            padding: 5px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Escape Room</h1>
+    
+    <p id="info">X: 0, Y: 0</p>
+    
+    <div class="sala" id="sala">
+        <div id="objeto"></div>
+    </div>
+    
+    <div class="objetos" id="contenedor">
+        <div class="item" data-nombre="llave">🔑</div>
+        <div class="item" data-nombre="mapa">🗺️</div>
+    </div>
+    
+    <div id="puerta">
+        <div id="cerradura"></div>
+    </div>
+    
+    <input type="text" id="codigo" placeholder="numeros"><br>
+    <input type="text" id="texto" placeholder="palabra">
+    
+    <div id="inventario">
+        <p>Inventario:</p>
+        <div id="lista"></div>
+    </div>
+    
+    <script src="practica5.js"></script>
+</body>
+</html>
