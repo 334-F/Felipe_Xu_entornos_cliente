@@ -53,3 +53,17 @@ cerradura.addEventListener("click", (e) => {
     e.stopPropagation(); // Detenemos la burbuja hacia la puerta
     alert("Necesitas una llave");
 });
+
+// Práctica Unidad 5. Entrega Parcial 1
+// Funcionalidad: Validación de teclado (Solo números)
+
+let inputCodigo = document.getElementById("codigo");
+
+inputCodigo.addEventListener("keydown", function(e) {
+    const esNumero = e.key >= "0" && e.key <= "9";
+    const teclas = ["Backspace", "Delete", "ArrowLeft", "ArrowRight"];
+    
+    if (!esNumero && !teclas.includes(e.key)) {
+        e.preventDefault(); // Bloqueamos cualquier tecla que no sea un número o control
+    }
+});
