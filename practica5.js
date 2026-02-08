@@ -20,3 +20,21 @@ objeto.addEventListener("click", (e) => {
     alert("Objeto encontrado!");
     objeto.style.display = "none";
 });
+
+// Práctica Unidad 5. Entrega Parcial 1
+// Funcionalidad: Delegación de eventos para el inventario
+
+const contenedor = document.getElementById("contenedor");
+const lista = document.getElementById("lista");
+
+contenedor.addEventListener("click", (e) => {
+    if (e.target.classList.contains("item")) {
+        const nombre = e.target.getAttribute("data-nombre");
+        
+        const item = document.createElement("p");
+        item.textContent = "- " + nombre;
+        lista.appendChild(item);
+        
+        e.target.remove();
+    }
+});
