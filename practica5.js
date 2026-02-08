@@ -67,3 +67,25 @@ inputCodigo.addEventListener("keydown", function(e) {
         e.preventDefault(); // Bloqueamos cualquier tecla que no sea un número o control
     }
 });
+
+// Práctica Unidad 5. Entrega Parcial 1
+// Funcionalidad: Validación de teclas especiales (Ctrl y Enter)
+
+let inputTexto = document.getElementById("texto");
+
+inputTexto.addEventListener("keydown", function(e) {
+    // Bloquear copiar y pegar (CTRL+C / CTRL+V)
+    if (e.ctrlKey && (e.key === "c" || e.key === "v")) {
+        e.preventDefault();
+        alert("No puedes copiar/pegar");
+        return;
+    }
+    
+    // ENTER para enviar
+    if (e.key === "Enter") {
+        e.preventDefault();
+        if (inputTexto.value === "escape") {
+            alert("Correcto!");
+        }
+    }
+});
