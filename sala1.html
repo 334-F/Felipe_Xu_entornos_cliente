@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sala 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="caja">
+        <h2>🔬 Sala 1 — El objeto misterioso</h2>
+        <p>Hay un objeto con datos ocultos. Pulsa los botones para ver las pistas y encontrar el código.</p>
+
+        <div class="bloque">
+            <strong>Pistas:</strong>
+            <button onclick="pista1()">Ver nombre</button>
+            <button onclick="pista2()">Ver ubicación</button>
+            <button onclick="pista3()">Ejecutar función</button>
+            <button onclick="pista4()">Dato oculto 🔍</button>
+            <button onclick="pista5()">Ver copia</button>
+        </div>
+
+        <div id="pistas"></div>
+
+        <div class="bloque">
+            <strong>Código de la puerta:</strong>
+            <input type="text" id="codigo" placeholder="escribe el código">
+            <button onclick="comprobar()">Abrir</button>
+            <div id="resultado"></div>
+        </div>
+    </div>
+    <script src="sala1.js"></script>
+</body>
+</html>
